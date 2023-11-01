@@ -1,3 +1,2 @@
-
-(org-babel-load-file (expand-file-name "config.org" user-emacs-directory))
+(load-file (expand-file-name "configs/config.el" user-emacs-directory))
 
