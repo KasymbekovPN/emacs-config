@@ -1,4 +1,8 @@
-(add-to-list 'load-path (expand-file-name "configs/scripts" user-emacs-directory))
+
+(defconst kapani/scripts-path "configs/scripts" "Path to scripts directory")
+(defconst kapani/settings-path "configs/settings" "Path to settings directory")
+
+(add-to-list 'load-path (expand-file-name kapani/scripts-path user-emacs-directory))
 
 (require 'elpaca-setup)
 
