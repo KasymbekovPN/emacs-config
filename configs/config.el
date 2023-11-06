@@ -1,14 +1,22 @@
 
-(defconst kapani/scripts-path "configs/scripts" "Path to scripts directory")
-(defconst kapani/settings-path "configs/settings" "Path to settings directory")
+(defconst kapani/scripts-path "configs/scripts" "Path to scripts directory.")
+(defconst kapani/settings-path "configs/settings" "Path to settings directory.")
+(defconst kapani/task-path "configs/tasks/default.el" "Path to configuration task.")
 
 (add-to-list 'load-path (expand-file-name kapani/scripts-path user-emacs-directory))
 
 (require 'elpaca-setup)
 
+;(defun kapani/load-config-file (file)
+;  (interactive "f")
+;  (load-file (expand-file-name )))
+
 (defun load-user-file (file)
   (interactive "f")
   (load-file (expand-file-name file user-emacs-directory)))
+
+
+(load-user-file kapani/task-path)
 
 ;; !!! load paths from folder tasks !!!
 (load-user-file "configs/settings/personal/default.el")
