@@ -7,25 +7,24 @@
 
 (require 'elpaca-setup)
 
-;(defun kapani/load-config-file (file)
-;  (interactive "f")
-;  (load-file (expand-file-name )))
-
-(defun load-user-file (file)
+(defun kapani/load-user-file (path)
+  "Loads file with relative path = PATH from user-emacs-directory"
   (interactive "f")
-  (load-file (expand-file-name file user-emacs-directory)))
+  (load-file (expand-file-name path user-emacs-directory)))
 
+(defun kapani/load-setting (task)
+  "Loads setting-file by task"
+  (let ((file-name (concat (cdr task) ".el"))
+        (directory-path (expand-file-name
+                         (car task)
+                         (expand-file-name kapani/settings-path  user-emacs-directory)))
+        (path nil))
+    (setq path (expand-file-name file-name directory-path))
+    (kapani/load-user-file path)
+    ))
 
-(load-user-file kapani/task-path)
+(kapani/load-user-file kapani/task-path)
 
-;; !!! load paths from folder tasks !!!
-(load-user-file "configs/settings/personal/default.el")
-(load-user-file "configs/settings/rainbow-delimiters/default.el")
-(load-user-file "configs/settings/smartparens/default.el")
-(load-user-file "configs/settings/mode-icons/default.el")
-(load-user-file "configs/settings/indent-guide/default.el")
-(load-user-file "configs/settings/treemacs/default.el")
-(load-user-file "configs/settings/doom-themes/default.el")
-(load-user-file "configs/settings/projectile/default.el")
-(load-user-file "configs/settings/ivy/default.el")
+(dolist (elem kapani/config-task)
+  (kapani/load-setting elem))
 
