@@ -7,7 +7,8 @@
                                    (cons "treemacs" "default")
                                    (cons "doom-themes" "default")
                                    (cons "projectile" "default")
-                                   (cons "ivy" "default"))
+                                   (cons "ivy" "default")
+                                   (cons "company" "default"))
   "Emacs configuration task"
   )
 
