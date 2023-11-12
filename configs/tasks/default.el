@@ -5,10 +5,11 @@
                                    (cons "mode-icons" "default")
                                    (cons "indent-guide" "default")
                                    (cons "treemacs" "default")
-                                   (cons "doom-themes" "default")
+                                   (cons "doom-themes" "kapani--apply-default-doom-themes-setting")
                                    (cons "projectile" "default")
                                    (cons "ivy" "default")
-                                   (cons "company" "default"))
+                                   (cons "company" "kapani--apply-default-company-setting")
+                                   (cons "flycheck" "kapani--apply-default-flycheck-setting"))
   "Emacs configuration task"
   )
 
