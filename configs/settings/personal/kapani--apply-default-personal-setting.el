@@ -40,12 +40,21 @@
   ;;; Save opened files
   (desktop-save-mode 1)
 
+  (set-face-attribute 'default nil :height 100)
+  
+  (setq-default line-spacing 0.33)
+  
   ;;; Hotkey's changing
-  (global-set-key (kbd "C-s") 'save-buffer) ;; previous : isearch-forward
+  (global-set-key (kbd "C-s") 'save-buffer) ;; previous: isearch-forward
   (global-set-key (kbd "C-f") 'isearch-forward)
-  ;(global-set-key (kbd "C-a") 'mark-whole-buffer) ;; previous : move-beginning-of-line
-  (global-set-key (kbd "C-x C-e") 'eval-buffer) ;; previous : eval-last-sexp
+  ;(global-set-key (kbd "C-a") 'mark-whole-buffer) ;; previous: move-beginning-of-line
+  (global-set-key (kbd "C-x C-e") 'eval-buffer) ;; previous: eval-last-sexp
+  (global-set-key (kbd "C-=") 'text-scale-increase) ;; previous: undefined
+  (global-set-key (kbd "C--") 'text-scale-decrease) ;; previous: negative-argument
+  ;(global-set-key (kbd "<C-wheel-up>") 'text-scale-increase) ;; default binding
+  ;(global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease) ;; default binding
 
+  
    ;;; Toggle  line highlighting
   (global-hl-line-mode 1)
 
