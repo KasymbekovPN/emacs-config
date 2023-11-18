@@ -11,7 +11,8 @@
                                    (cons "projectile" "kapani--apply-default-projectile-setting")
                                    (cons "ivy" "kapani--apply-default-ivy-setting")
                                    (cons "company" "kapani--apply-default-company-setting")
-                                   (cons "flycheck" "kapani--apply-default-flycheck-setting"))
+                                   (cons "flycheck" "kapani--apply-default-flycheck-setting")
+                                   (cons "magit" "kapani--apply-default-magit-setting"))
   "Emacs configuration task."
   )
 
