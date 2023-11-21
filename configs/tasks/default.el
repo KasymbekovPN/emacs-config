@@ -13,7 +13,9 @@
                                    (cons "company" "kapani--apply-default-company-setting")
                                    (cons "flycheck" "kapani--apply-default-flycheck-setting")
                                    (cons "magit" "kapani--apply-default-magit-setting")
-                                   (cons "doom-modeline" "kapani--apply-default-doom-modeline-setting"))
+                                   (cons "doom-modeline" "kapani--apply-default-doom-modeline-setting")
+                                   (cons "yasnippet" "kapani--apply-default-yasnippet-setting")
+                                   (cons "which-key" "kapani--apply-default-which-key-setting"))
   "Emacs configuration task."
   )
 

@@ -1,4 +1,6 @@
 
+;;; Code:
+
 (defconst kapani/scripts-path "configs/scripts" "Path to scripts directory.")
 (defconst kapani/settings-path "configs/settings" "Path to settings directory.")
 (defconst kapani/task-path "configs/tasks/default.el" "Path to configuration task.")
@@ -8,12 +10,12 @@
 (require 'elpaca-setup)
 
 (defun kapani/load-user-file (path)
-  "Loads file with relative path = PATH from user-emacs-directory"
+  "Load file with relative path = PATH from 'user-emacs-directory'."
   (interactive "f")
   (load-file (expand-file-name path user-emacs-directory)))
 
 (defun kapani/load-setting (task)
-  "Loads setting-file by task"
+  "Load setting-file by TASK."
   (let ((file-name (concat (cdr task) ".el"))
         (directory-path (expand-file-name
                          (car task)
