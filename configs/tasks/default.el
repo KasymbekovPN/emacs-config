@@ -15,7 +15,8 @@
                                    (cons "magit" "kapani--apply-default-magit-setting")
                                    (cons "doom-modeline" "kapani--apply-default-doom-modeline-setting")
                                    (cons "yasnippet" "kapani--apply-default-yasnippet-setting")
-                                   (cons "which-key" "kapani--apply-default-which-key-setting"))
+                                   (cons "which-key" "kapani--apply-default-which-key-setting")
+                                   (cons "lsp" "kapani--apply-default-lsp-setting"))
   "Emacs configuration task."
   )
 
